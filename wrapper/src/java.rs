@@ -76,7 +76,7 @@ pub fn get_java_extract_folder_from_cache_dir(cache_dir: &Path) -> PathBuf {
 pub fn get_java_executable_in_downloaded_jre(cache_dir: &Path) -> Option<String> {
     let mut executable_path = get_java_extract_folder_from_cache_dir(cache_dir);
     #[cfg(target_os = "macos")]
-    executable_path.push("zulu-17.jre/Contents/Home/bin/java");
+    executable_path.push("Contents/Home/bin/java");
     #[cfg(target_os = "windows")]
     executable_path.push("bin\\java.exe");
 
